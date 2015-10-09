@@ -211,9 +211,7 @@ def gameloop():
 
                 
 
-            #if event.type==pygame.KEYUP:
-                #f event.key==pygame.K_LEFT or event.key==pygame.K_RIGHT:
-                    #ead_x_change=0
+         
 
             
         if lead_X >=display_width or lead_X<0 or lead_Y >=display_hieght or lead_Y <0:
@@ -229,11 +227,11 @@ def gameloop():
 
 
         
-        #print(event)
+        
 
         gameDisplay.fill(white)
       
-        #pygame.draw.rect(gameDisplay,red,[randomAppleX,randomAppleY,AppleThickness,AppleThickness])
+        
         gameDisplay.blit(appleimg,(randomAppleX, randomAppleY))
        
         snakeHead=[]
@@ -258,18 +256,13 @@ def gameloop():
 
         
         
-        #gameDisplay.fill(red,rect=[200,200,50,50])
+        
 
         score(snakeLenght-1)
         pygame.display.update()
 
 
-##        if lead_X >=randomAppleX and lead_X <= randomAppleX +AppleThickness:
-##             if lead_Y >=randomAppleY and lead_Y <= randomAppleY +AppleThickness:
-##                 randomAppleX=round(random.randrange(0,display_width-block_size))#/10.0)*10.0
-##                 randomAppleY=round(random.randrange(0,display_hieght-block_size))#/10.0)*10.0
-##                 snakeLenght+=1
-##    
+
            
         if lead_X > randomAppleX and lead_X < randomAppleX + AppleThickness or lead_X + block_size >randomAppleX and lead_X + block_size < randomAppleX + AppleThickness:
             if lead_Y >randomAppleX and lead_Y < randomAppleY + AppleThickness:
